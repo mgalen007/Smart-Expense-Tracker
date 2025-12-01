@@ -26,9 +26,15 @@ Smart-Expense-Tracker/
 │ └── package.json
 │
 ├── frontend/
-│ ├── index.html
-│ ├── styles.css
-│ └── app.js
+│ ├── pages/
+|   ├── index.html
+|   ├── goals.html
+|   ├── transactions.html
+|   ├── budgets.html
+│ ├── stylesheets/
+|   ├── styles.css
+│ └── scripts/
+|   ├── app.js
 │
 └── README.md
 
