@@ -60,4 +60,4 @@ cd backend
 npm install
 npm start
 
-Run the frontend by simpy opening the file index.html.
+Run the frontend by simply opening the file index.html.
