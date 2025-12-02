@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/styles.css">
-    <title>SmartSpend -Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>SmartSpend - Dashboard</title>
 </head>
 <body>
     <header>
-        <h2>SmartSpend Expense Tracker</h2>
+        <h2 class="indigo">SmartSpend Expense Tracker</h2>
         <p class="gray">Take control of your finances</p>
         <hr>
     </header>
@@ -19,7 +20,7 @@
             </div>
             <div id="pages">
                 <ul>
-                    <li>Dashboard</li><br>
+                    <li id="active">Dashboard</li><br>
                     <li>Transactions</li><br>
                     <li>Budgets</li><br>
                     <li>Goals</li><br>
@@ -27,8 +28,40 @@
             </div>
         </aside>
         <div id="main-content">
-
+            <div id="mc-tabs">
+                <div class="mc-tab">
+                    <p class="gray">Total Balance</p>
+                    <h1 class="amount">11150.0</h1>
+                    <p class="sub-h gray">↑ 0% from last month</p>
+                </div>
+                <div class="mc-tab">
+                    <p class="gray">Monthly Income</p>
+                    <h1 class="amount" id="monthly-i">12000.0</h1>
+                    <p class="sub-h gray">This month</p>
+                </div>
+                <div class="mc-tab">
+                    <p class="gray">Monthly Expenses</p>
+                    <h1 class="amount" id="monthly-e">850.00</h1>
+                    <p class="sub-h gray">This month</p>
+                </div>
+                <div class="mc-tab">
+                    <p class="gray">Savings Rate</p>
+                    <h1 class="amount" id="savings">92.9</h1>
+                    <p class="sub-h gray">% of income</p>
+                </div>
+            </div>
+            <div id="charts">
+                <div class="chart">
+                    <p class="indigo"><strong>Spending by Category</strong></p>
+                    <canvas id="category-chart"></canvas>
+                </div>
+                <div class="chart">
+                    <p class="indigo"><strong>Monthly Overview</strong></p>
+                    <canvas id="monthly-chart"></canvas>
+                </div>
+            </div>
         </div>
-    </main>    
+    </main> 
+    <script src="../scripts/app.js"></script>   
 </body>
 </html>

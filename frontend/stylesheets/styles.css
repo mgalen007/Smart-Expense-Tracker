@@ -4,6 +4,7 @@
 
 body{
     height: 100vh;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 header{
@@ -18,8 +19,9 @@ main{
 }
 
 #sidebar{
-    border: 1.5px solid gray;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    background: white;
+    border: none;;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     height: 70vh;
     width: fit-content;
     text-align: center;
@@ -29,8 +31,9 @@ main{
 }
 
 #main-content{
-    border: 1.5px solid gray;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    background: white;
+    border: none;;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     height: 71.75vh;
     width: 80vw;
     border-radius: 7.5px;
@@ -40,7 +43,154 @@ main{
     list-style-type: none;
 }
 
+#sidebar li{
+    border: 2px solid black;
+    padding: 7.5px 20px;
+    border-radius: 7.5px;
+    border: none;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+    width: 95%;
+    text-align: center;
+}
+
+#sidebar li#active{
+    color: white;
+    background: indigo;
+}
+
+#sidebar li:hover{
+    color: white;
+    background: indigo;
+}
+
 .gray{
     color: rgba(0, 0, 0, 0.5);
     transform: translateY(-1vh);
+}
+
+.indigo{
+    color: indigo;
+}
+
+#mc-tabs{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 2.5vh;
+    padding: 0 1vw;
+    flex-wrap: wrap;
+}
+
+.mc-tab{
+    border-radius: 7.5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border: none;;
+    height: 15vh;
+    width: 200px;
+}
+
+#charts{
+    display: flex;
+    height: 70%;
+    width: auto;
+    margin-top: 2vh;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.chart{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    height: 30vh;
+    width: calc(fit-content + 50px);
+    border: none;;
+    border-radius: 7.5px;
+    padding: 0 30px;
+}
+
+.mc-tab .gray{
+    text-align: center;
+}
+
+.chart .indigo{
+    text-align: center;
+}
+
+.amount{
+    text-align: center;
+    transform: translateY(-3vh);
+    font-size: 1.85rem;
+}
+
+.amount::after{
+    content: "RWF";
+    font-size: .9rem;
+    margin-left: .25vw;
+}
+
+.amount#savings::after{
+    content: "%";
+}
+
+.sub-h{
+    font-size: .75rem;
+    transform: translateY(-5vh);
+}
+
+#monthly-i{
+    color: rgb(105, 214, 250);
+}
+
+#monthly-e{
+    color: rgba(255, 0, 0, 0.75);
+}
+
+#category-chart{
+    height: 50%;
+    width: calc(80% + 60px);
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-4vh);
+}
+
+#monthly-chart{
+    height: 60%;
+    width: calc(80% + 60px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 685px){
+    #sidebar{
+        display: none;
+    }
+    #main-content{
+        width: calc(87vw);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media(max-width: 1290px){
+    .chart{
+        width: 400px;
+    }
+}
+
+@media(max-width: 1115px){
+    .chart{
+        width: 380px;
+        transform: translateY(-5vh);
+    }
+}
+
+@media(max-width: 600px){
+    #charts{
+        flex-wrap: wrap;
+        margin-top: 7.5vh;
+    }
+    #main-content{
+        height: calc(100% + 1.5vh);
+    }
 }
