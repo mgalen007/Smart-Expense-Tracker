@@ -37,26 +37,29 @@ main{
     height: 71.75vh;
     width: 80vw;
     border-radius: 7.5px;
+    padding-left: 30px;
 }
 
 #sidebar ul{
     list-style-type: none;
+    margin-top: 5vh;
 }
+
 
 #sidebar a{
     text-decoration: none;
     color: black;
+    padding: 7.5px 20px;
+    border-radius: 7.5px;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+    width: 200px;
+    text-align: center;
+    transform: translateX(5vw);
 }
 
 #sidebar li{
-    border: 2px solid black;
-    padding: 7.5px 20px;
-    border-radius: 7.5px;
-    border: none;
-    cursor: pointer;
-    transition: all .25s ease-in-out;
-    width: 95%;
-    text-align: center;
+    transform: translateX(1vw);
 }
 
 #sidebar #active a{
@@ -65,17 +68,17 @@ main{
     border: none;
     cursor: pointer;
     color: white;
-    background: indigo;
+    background: rgb(40, 147, 254);
 }
 
-#sidebar li a:hover{
+#sidebar a:hover{
     padding: 7.5px 20px;
     border-radius: 7.5px;
     border: none;
     cursor: pointer;
     width: 95%;
     color: white;
-    background: indigo;
+    background: rgb(40, 147, 254);
 }
 
 .gray{
@@ -84,7 +87,7 @@ main{
 }
 
 .indigo{
-    color: indigo;
+    color: rgb(40, 147, 254);
 }
 
 #mc-tabs{
@@ -102,6 +105,7 @@ main{
     border: none;;
     height: 15vh;
     width: 200px;
+    transform: translateY(2vh);
 }
 
 #charts{
@@ -174,6 +178,78 @@ main{
     margin-left: auto;
     margin-right: auto;
 }
+
+#user-icon{
+    background: rgb(40, 147, 254);
+    padding: 12px;
+    height: 56px;
+    width: 56px;
+    transform: translateX(2.3vw);
+    margin-top: 2vh;
+    fill: white;
+    border-radius: 50%;
+}
+
+#welcome{
+    width: calc(100% + 4.75vw);
+}
+
+#home-icon{
+    position: fixed;
+    right: 100px;
+}
+
+form#filter-form{
+    display: flex;
+    gap: 5vw;
+}
+
+#filter-form select{
+    border: 1.5px solid gray;
+    padding: 3px 7.5px;
+}
+
+#filter-form select:focus{
+    outline: none;
+}
+
+#transactions{
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    margin-top: 5vh;
+    width: 90%;
+    padding: 5px 7.5px;
+}
+
+#tr-table tr{
+    display: flex;
+    gap: 8.5vw;
+}
+
+#date-div{
+    border: 2px solid black;
+}
+
+#desc-div{
+    border: 2px solid black;
+}
+
+#cat-div{
+    border: 2px solid black;
+}
+
+#type-div{
+    border: 2px solid black;
+}
+
+#amount-div{
+    border: 2px solid black;
+}
+
+#act-div{
+    border: 2px solid black;
+}
+
 
 @media(max-width: 685px){
     #sidebar{

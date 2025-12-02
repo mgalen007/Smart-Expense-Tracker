@@ -5,7 +5,7 @@ const monthlyChart = document.getElementById('monthly-chart')
 new Chart(categoryChart, {
     type: 'doughnut',
     data: {
-        labels: ['Food', 'Transportation', 'Housing', 'Entertainment', 'Shopping'],
+        labels: ['Food', 'Transport', 'Housing', 'Entertainment', 'Shopping'],
         datasets: [{
             data: [300, 400, 500, 600, 700, 800]
         }]
