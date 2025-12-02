@@ -226,30 +226,75 @@ form#filter-form{
     gap: 8.5vw;
 }
 
-#date-div{
-    border: 2px solid black;
+.date-div{
+    width: 15%;
 }
 
-#desc-div{
-    border: 2px solid black;
+.desc-div{
+    width: 18.5%;
 }
 
-#cat-div{
-    border: 2px solid black;
+.cat-div{
+    width: 18%;
 }
 
-#type-div{
-    border: 2px solid black;
+.type-div{
+    width: 14%;
 }
 
-#amount-div{
-    border: 2px solid black;
+.amount-div{
+    width: 16%;
 }
 
-#act-div{
-    border: 2px solid black;
+.act-div{
+    width: 8.2%;
 }
 
+.tr-details div{
+    height: 4vh;
+}
+
+.tr-details{
+    display: flex;
+    overflow: hidden;
+}
+
+#add-new-tr{
+    position: fixed;
+    top: 20vh;
+    right: 7vh;
+    width: fit-content;
+    padding: 7.5px;
+}
+
+#add-new-tr select, input{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1.5px solid gray;
+}
+
+#add-new-tr select:focus, input:focus{
+    outline: none;
+}
+
+#new-tr-btn{
+    color: white;
+    border: none;
+    background:rgb(40, 147, 254);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-tr-btn:hover{
+    background: rgba(40, 147, 254, 0.75);
+}
+
+#details-div p{
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 0.9rem;
+    transform: translateY(-1vh);
+}
 
 @media(max-width: 685px){
     #sidebar{
