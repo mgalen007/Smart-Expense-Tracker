@@ -51,7 +51,7 @@ Smart-Expense-Tracker/
 ### Frontend
 - HTML  
 - CSS  
-- Vanilla JavaScript (Fetch API)
+- Vanilla JavaScript (Fetch API, Chart.js)
 
 ---
 
